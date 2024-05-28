@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.converter.moshi)
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
+    ksp(libs.moshi.kotlin.codegen)
 
     implementation(libs.room.runtime)
     ksp(libs.room.compiler)

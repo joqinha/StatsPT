@@ -1,0 +1,9 @@
+<resources>
+    <string name="PopulacaoResidente">População residente</string>
+    <string name="TaxaDesemprego">Taxa de desemprego</string>
+    <string name="extend">Extend</string>
+    <string name="collapse">Collapse</string>
+    <string name="previous_year">Previous year</string>
+    <string name="next_year">Next year</string>
+    <string name="today">Today</string>
+</resources>

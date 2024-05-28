@@ -1,19 +1,20 @@
 package com.joaoferreira.ine_data.remote
 
-import com.joaoferreira.ine_data.remote.dto.SearchDto
+import com.joaoferreira.ine_data.remote.dto.IndicadorIneDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface IneApi {
-
-    @GET("cgi/search.pl?search_simple=1&json=1&action=process&fields=product_name,nutriments,image_front_thumb_url")
-    suspend fun searchFood(
-        @Query("search_terms") query: String,
-        @Query("page") page: Int,
-        @Query("page_size") pageSize: Int
-    ): SearchDto
+    @GET("ine/json_indicador/pindica.jsp")
+    suspend fun getIndicador(
+        @Query("op") op: String = "2",
+        @Query("varcd") varcdCod: String,
+        @Query("Dim1") dim1: String,
+        @Query("Dim2") dim2: String,
+        @Query("lang") lang: String
+    ): List<IndicadorIneDto>
 
     companion object {
-        const val BASE_URL = "https://us.openfoodfacts.org/"
+        const val BASE_URL = "https://www.ine.pt/"
     }
 }

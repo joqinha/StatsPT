@@ -54,9 +54,14 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.compose.material3)
     implementation(libs.activity.compose)
+    implementation(libs.lifecycle.viewmodel.ktx)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    ksp("androidx.hilt:hilt-compiler:1.0.0")
+    implementation("androidx.activity:activity-ktx:1.5.1")
+    implementation("androidx.fragment:fragment-ktx:1.5.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
